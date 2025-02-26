@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="持續了五個年頭，雖然已畫下句點，但相信其中萌生出的『愛』苗，已經悄悄地扎根在許多孩子身上，他們也會將其擴散，感染周遭的每個人，讓這『愛』無限的擴大，延伸下去......">
+	<meta name="author" content="Shiau Sir">
+	<meta name="keywords" content="大墩,大墩國小,校園有情,校園,溫馨,溫馨傳愛,臺中,台中市,音樂,主題,公益,罕見,罕見疾病,達人,國樂,合唱,明道,明道中學,市府,台中,政府,三條,三條國小,溪陽國中,溪陽,彰化,口琴,玩樂,年代,關懷,薩克斯風">
+	<meta name="robots" content="index, follow" > 
+	<meta name="copyright" CONTENT="本網頁著作權臺中市大墩國小所有"> 
+	<meta name="creation-date" content="11-11-2019 20:40:01">
+    <title>臺中市大墩國小『校園有情溫馨傳愛』系列音樂會回顧！</title>  
+    
+    <!-- Favicon -->
+     <link rel="shortcut icon" href="../img/favicon.ico" />
+
+    <!-- Google Fonts -->   
+    <link href="http://fonts.useso.com/css?family=Lato:400,700,300" rel="stylesheet" type="text/css">
+    <!--[if IE]>
+    <link href="http://fonts.useso.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="http://fonts.useso.com/css?family=Lato:400" rel="stylesheet" type="text/css">
+    <link href="http://fonts.useso.com/css?family=Lato:700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.useso.com/css?family=Lato:300" rel="stylesheet" type="text/css">
+    <![endif]-->    
+    
+    <!-- CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+	<link href="../css/font-awesome.min.css" rel="stylesheet">
+	<link href="../css/prettyPhoto.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/docs.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/theme.css" rel="stylesheet">
+    <link href="../css/animate.css" rel="stylesheet">
+
+	<!--slider-->
+	<link rel="stylesheet" type="text/css" href="../css/slider.css" />
+	<script src="../js/modernizr.custom.63321.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<style type="text/css">
+	article, aside, figure, footer, header, 
+	hgroup, menu, nav, section 
+	{ display: block; }
+ 	
+	ul.playlist {
+		margin-top: 20px;
+		padding: 0;
+		list-style: none;
+		width: 100%;
+		margin-bottom:20px;
+		display:block;
+	}
+	ul.playlist li {
+		margin: 8px 3px 0 0;
+		display:inline-flex;
+		
+		
+	}
+	ul.playlist li a img {
+		border: 0;
+		vertical-align: middle;
+	}
+	
+	.tv {
+		width: 100%;
+		height: auto;
+		padding:5px 15px 0 15px;
+		background-color:#E9DFDF;
+		margin-left:-15px;
+		box-shadow: 1px 1px 1px 1px #323232;
+	}
+	
+	.video {
+		width: 100%;
+		height: auto;
+	}
+	
+	.playlistbg {
+		background-color:#E38183;
+		width:100%;
+		height:auto;
+	}
+	
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			var thumbSize = 'large',			// 設定要取得的縮圖是大圖還是小圖
+												// 大圖寬高為 480X360；小圖寬高為 120X90
+				imgWidth = '228',				// 限制圖片的寬
+				imgHeight = '171',				// 限制圖片的高
+				swfWidth = '100%',				// 指定 YouTube 影片的寬
+				swfHeight = '360',				// 指定 YouTube 影片的高
+				autoPlay = '&autoplay=1',		// 是否載入 YouTube 影片後自動播放；若不要自動播放則設成 0
+				fullScreen = '&fs=1',			// 是否允許播放 YouTube 影片時能全螢幕播放
+				$video = $('.video'),			// 用來放置 Youtube 影片的區
+				_videoOffset = $video.offset(),	// 取得 $video 區塊的座標
+				_speed = 600;					// 縮圖移動到 $video 區塊的速度
+			
+			var _first = true;
+	
+			$('.playlist>li>span>a').each(function(){
+				// 取得要連結轉換的網址及訊息內容
+				var _this =  $(this),
+					_url = _this.attr('href'),
+					_info = _this.text(),
+					_type = (thumbSize == 'large') ? 0 : 2;
+				
+				// 取得 vid
+				var vid = _url.match('[\\?&]v=([^&#]*)')[1];
+	
+				// 取得縮圖
+				var thumbUrl = "https://i.ytimg.com/vi/"+vid+"/hqdefault" + ".jpg";
+				
+				// 把目前超連結的內容轉換成圖片並加入 click 事件
+				_this.html('<img src="'+thumbUrl+'" alt="'+_info+'" title="'+_info+'" width="'+imgWidth+'" height="'+imgHeight+'" />').click(function(){
+					return false;
+				}).focus(function(){
+					this.blur();
+				}).children('img').click(function(){
+					var $this = $(this), 
+						_offset = $this.offset();
+					
+					if(_first){
+						$video.html(showYoutube(vid));
+						return (_first = false);
+					}
+	
+					var $clone = $this.clone().appendTo('body')
+					$clone.css({
+						position: 'absolute', 
+						top: _offset.top,
+						left: _offset.left
+					}).animate({
+						left: _videoOffset.left,
+						top: _videoOffset.top, 
+						width: $video.width(),
+						height: $video.height()
+					}, _speed, function(){
+						// 當點擊到圖片時就轉換成 YouTube 影片
+						$video.html(showYoutube(vid));
+						$clone.fadeOut(function(){
+							$(this).remove();
+						});
+					});
+					
+					return false;
+				});
+			});
+	
+			function showYoutube(vid){
+				// 當點擊到圖片時就轉換成 YouTube 影片
+				var swf  = '<object width="'+swfWidth+'" height="'+swfHeight+'">';
+				swf += '<param name="movie" value="http://www.youtube.com/v/'+vid+autoPlay+fullScreen+'"></param>';
+				swf += '<param name="wmode" value="transparent"></param>';
+				swf += (fullScreen == '&fs=1') ? '<param name="allowfullscreen" value="true"></param>' : '';
+							
+				swf += '<embed type="application/x-shockwave-flash" src="http://www.youtube.com/v/'+vid+autoPlay+fullScreen+'" ';
+				swf += (fullScreen == '&fs=1') ? 'allowfullscreen="true" ' : '';
+				swf += 'wmode="transparent" width="'+swfWidth+'" height="'+swfHeight+'"></embed>';
+	
+				swf += '</object/>';
+							
+				return swf;
+			}
+	
+			// 先載入第一個影片
+			$('.playlist>li>span>a').eq(0).children('img').click();
+	
+			// 變更影片播放為自動播放
+			autoPlay = '&autoplay=1';
+		});
+	</script>
+</head>
+
+<body>
+<!--header-->
+	<div class="header">
+		<div class="container">
+		<!--logo-->
+			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+			<i class="fa fa-bars"></i></button>
+				<div class="logo">
+					<a href="../index.html"><img src="../img/toplogo.svg" alt="大墩國小『校園有情溫馨傳愛』系列音樂會 回顧" style="width: 70%; height: auto;" class="animated bounceInDown" /></a>  
+				</div>
+				<!--menu-->
+				<nav id="main_menu">
+					<div class="nav-collapse collapse">
+						<ul class="nav nav-pills">
+                        	<li class="dropdown"><a href="../index.html">首頁</a></li>
+							<li class="dropdown"><a href="about.html">緣起歷程</a></li>
+							<li class="dropdown"><a href="donate.html">公益捐助</a></li>
+							<li class="dropdown"><a href="plan.html">活動文檔</a></li>
+						    <li class="dropdown"><a href="poster.html">海報宣傳</a></li>
+							<li class="dropdown active"><a href="javascript:{}">媒體報導</a></li>
+							<li class="dropdown"><a href="photos.html">活動相冊</a></li>
+							<li class="dropdown"><a href="video.html">珍藏影音</a></li>
+						</ul>
+					</div>
+				</nav>
+		</div>
+	</div>
+	<!--//header-->
+<!--page-->
+	<!--banner-->
+    <div id="banner">
+			<div class="container intro_wrapper">
+				<div class="inner_content">
+                	<h1><i class="fa fa-joomla fa-spin hue"></i><span> 《媒體報導》</span></h1>
+					<div class="animated wow rollIn" data-wow-delay="0.5s"><h1 class="title"><i class="fa fa-newspaper hue"></i> 歷屆媒體報導</h1></div>	
+					<h2 class="intro indent">
+                  我們用心的辦好每一場音樂會，而藉由媒體記者朋友的宣傳報導，希望讓更多的人看到這個有意義的音樂會，進而一起來欣賞音樂，也一起來響應行善。</h2>
+				</div>
+			</div>
+		</div>
+		<!--//banner-->
+        <div class="container wrapper">
+			<div class="inner_content">
+            <div class="pad20"></div>
+            	<div class="row">
+            		<div class="span12">								
+                    	<h1><i class="fa fa-television fa-2x green"></i><span class="blue"> 歷屆宣傳記者會與捐贈記者會</span></h1>
+                	</div>
+                    <div class="row">
+                    	<div class="span6 piclist">							
+							<iframe width="90%" height="360px" src="https://www.youtube.com/embed/nEQK1h_A15k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>第五屆 捐款記者會 By 人間衛視<br><br>
+							<iframe width="90%" height="360px" src="https://www.youtube.com/embed/9SdIp_mGp_Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>第五屆 宣傳記者會 By 人間衛視<br><br>
+							<iframe width="90%" height="360px" src="https://www.youtube.com/embed/Ap4RvTziGpA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>第四屆 宣傳記者會 By TCCN<br><br>
+							<iframe width="90%" height="360px" src="https://www.youtube.com/embed/IbCxbQpG0bk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>第三屆 宣傳記者會 By 人間衛視<br><br>
+							<iframe width="90%" height="360px" src="https://www.youtube.com/embed/y1Unb1xYijI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>第三屆 宣傳記者會 By ART TV TAIWAN<br><br>
+							<iframe width="90%" height="360px" src="https://www.youtube.com/embed/-VQOAk4FI_s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>第一屆 宣傳記者會 By 人間衛視<br><br>
+							<iframe width="90%" height="360px" src="https://www.youtube.com/embed/gax9pjuA5Rk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>第四屆 捐款記者會 By TCNN<br><br>
+							<iframe width="90%" height="360px" src="https://www.youtube.com/embed/YnhSzW-eQFY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>第一屆 捐款記者會 By TCNN<br><br>
+						</div>
+						
+						<div class="span6 piclist">
+							<iframe width="90%" height="360px" src="https://www.youtube.com/embed/yz_RAoxILIY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>第五屆 宣傳記者會 By TCNN<br><br>
+							<iframe width="90%" height="360px" src="https://www.youtube.com/embed/Wk0dJ-kXfKo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>第四屆 宣傳記者會 By 群健有線電視<br><br>
+							<iframe width="90%" height="360px" src="https://www.youtube.com/embed/MqC8prR2oRA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>第四屆 宣傳記者會 By 人間衛視<br><br>
+							<iframe width="90%" height="360px" src="https://www.youtube.com/embed/efSIMNOHpUQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>第三屆 宣傳記者會 By TCCN<br><br>
+							<iframe width="90%" height="360px" src="https://www.youtube.com/embed/pdy8EuNB8M0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>第二屆 宣傳記者會 By ART TV TAIWAN<br><br>
+							<iframe width="90%" height="360px" src="https://www.youtube.com/embed/SRkH4iRtMW8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>第一屆 宣傳記者會 By 大台中新聞<br><br>
+							<iframe width="90%" height="360px" src="https://www.youtube.com/embed/Y0MEA_lm4dU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>第三屆 捐款記者會 By TCNN<br><br>
+						</div>
+					</div>	
+				</div>		
+                		
+            </div><!--end inner_content-->
+        </div><!--end container wrapper-->
+        
+<!-- footer 2 -->
+    
+	<div id="footer2">
+		<div class="container">
+			<div class="row">
+				<div class="span12">
+					<div class="copyright">
+						<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="創用 CC 授權條款" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+						<script type="text/javascript">
+						//<![CDATA[
+						var d = new Date()
+						document.write(d.getFullYear())
+						//]]>
+						</script>						
+						&copy;<a href="http://ddes.tc.edu.tw/" target="_blank" title="臺中市南屯區大墩國民小學">臺中市大墩國小</a>&nbsp; - Designed By Shiau Sir From DDES.2020/NO.10.
+					</div></div>
+			</div>
+   		</div>
+	</div>
+						
+				
+				            
+<!-- scripts -->	
+<script src="../js/jquery.js"></script>			
+<script src="../js/bootstrap.min.js"></script>	
+<script type="text/javascript" src="../js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="../js/scripts.js"></script>
+<script src="../js/jquery.isotope.min.js" type="text/javascript"></script>
+<script src="../js/jquery.touchSwipe.min.js"></script>
+<script src="../js/jquery.mousewheel.min.js"></script>				
+<script src="../js/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+	$(window).load(function(){	
+	$('.projects').isotope({
+  });
+});
+//]]>
+</script>		
+<script type="text/javascript">
+//<![CDATA[
+		$(function () {
+			$('div.element').hide();
+		});
+		var i = 0;//initialize
+		var int=0;
+		$(window).bind("load", function() {
+			var int = setInterval("doThis(i)",100);//fade in speed in milliseconds
+		}); 
+	function doThis() {
+			var imgs = $('div.element').length;
+			if (i >= imgs) {
+				clearInterval(int);
+			}
+			$('div.element:hidden').eq(0).fadeIn(100);
+			i++;//add 1 to the count
+		}
+		//]]>
+</script>
+
+<script src="../js/wow.min.js"></script>
+<script>
+if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+	new WOW().init();
+};
+</script>
+
+</body>
+</html>
